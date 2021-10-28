@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Digital Clock</title> 
+  <title>Chad's Simple Digital Clock</title> 
   <link href="style.css" rel="stylesheet" />
 </head>
 
@@ -13,8 +13,10 @@
     <h1>Simple Digital Clock</h1>
     <p class="clock">
       <script>   
+
+      
       /*
-        //Here lies my old code before discovering I could write it as I did starting at line 37. 
+        //Old code before discovering I could write it as I did below
 
         var date = new Date(); 
         var day = date.getDate(); //getDay would return the day of the week (Ex: Friday=5)
@@ -33,10 +35,22 @@
         document.write(currentDate);
         document.write(currentTime);
       */
-        var date = new Date();
-        var currentDate = (date.getMonth()+1)+'-'+date.getDate()+'-'+date.getFullYear();
+
+        var date = new Date(); //Not quite sure what this does yet. Instances the Date class? 
+        
+        const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday",];
+
+        const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        const ordinalDays = ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th", "10th", "11th", "12th", "13th", "14th", "15th", "16th", "17th", "18th", "19th", "20th", "21st", "22nd", "23rd", "24th", "25th", "26th", "27th", "28th", "29th", "30th", "31st"]; 
+        
+        var currentDate = dayNames[date.getDay()]+", "+monthNames[date.getMonth()]+' '+ordinalDays[date.getDate()-1]+' '+date.getFullYear();
+
         var currentTime = date.getHours()+':'+String(date.getMinutes()).padStart(2,"0")+':'+String(date.getSeconds()).padStart(2,"0");
-        document.write(currentTime);         
+        
+        document.write(currentTime);  
+
+        
       </script>
     </p>
 
@@ -45,7 +59,10 @@
         document.write(currentDate);     
       </script>
     </p>
-    <img src="https://www.models-resource.com/resources/big_icons/15/14382.png" width=150px padding=100px margine=100px>
+    
+    <!-- <img src="https://www.models-resource.com/resources/big_icons/15/14382.png" width=150px padding=100px margine=100px> -->
+
+    
   </div>
 
 
