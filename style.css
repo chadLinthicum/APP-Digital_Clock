@@ -1,0 +1,27 @@
+body {
+  background-color:cadetblue;
+}
+
+div {
+  text-align: center;
+}
+
+h1 {
+  padding-top: 20px
+}
+
+p.clock {
+  font-size: 100px;
+  /* border:solid; */
+  margin:0px;
+}
+
+p.date {
+  font-size: 50px;
+  /* border:solid; */
+  margin:0px;
+}
+
+#date {
+  font-size: 50px;
+}

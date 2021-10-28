@@ -4,12 +4,51 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A2-Home</title> 
+  <title>Simple Digital Clock</title> 
   <link href="style.css" rel="stylesheet" />
 </head>
 
 <body>
-  
+  <div>
+    <h1>Simple Digital Clock</h1>
+    <p class="clock">
+      <script>   
+      /*
+        //Here lies my old code before discovering I could write it as I did starting at line 37. 
+
+        var date = new Date(); 
+        var day = date.getDate(); //getDay would return the day of the week (Ex: Friday=5)
+        //var month = date.getMonth()+1; //without padding of 0 string
+        var month = String(date.getMonth()+1).padStart(2,"0");
+        var year = date.getFullYear(); 
+        var hour = date.getHours();
+        //var minute = date.getMinutes(); //without padding of 0 string
+        var minute = String(date.getMinutes()).padStart(2,"0");
+        //var second = date.getSeconds(); //without padding of 0 string
+        var second = String(date.getSeconds()).padStart(2,"0");
+
+        var currentDate = `${month}-${day}-${year}`; //example of string interpolation
+        var currentTime = `${hour}:${minute}:${second}`;
+        
+        document.write(currentDate);
+        document.write(currentTime);
+      */
+        var date = new Date();
+        var currentDate = (date.getMonth()+1)+'-'+date.getDate()+'-'+date.getFullYear();
+        var currentTime = date.getHours()+':'+String(date.getMinutes()).padStart(2,"0")+':'+String(date.getSeconds()).padStart(2,"0");
+        document.write(currentTime);         
+      </script>
+    </p>
+
+    <p class="date">
+      <script>
+        document.write(currentDate);     
+      </script>
+    </p>
+    <img src="https://www.models-resource.com/resources/big_icons/15/14382.png" width=150px padding=100px margine=100px>
+  </div>
+
+
 
 </body>
 </html>
