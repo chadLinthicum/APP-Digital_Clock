@@ -1,16 +1,25 @@
 body {
-  background-color:cadetblue;
+  background-image: url("https://c4.wallpaperflare.com/wallpaper/1004/185/126/classic-art-clocks-landscape-melting-wallpaper-thumb.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
 }
 
 div {
   text-align: center;
   font-size: 25px;
-}
-
-h1 {
-  padding-top: 20px
+  background-color:khaki;
+  margin-left: 0px;
+  border:green;
+  border-style: dashed;
+  margin-left: 275px;
+  margin-right: 275px;
 }
 
 p.clock {
   display: inline;
+  font-size: 100px;
+}
+
+p.date {
+  font-size: 50px;
 }

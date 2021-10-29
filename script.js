@@ -1,14 +1,17 @@
 function showTime() {
   const theTime = new Date(); //To use Date, must first establish a variable. Use const instead of var. 
 
-  const currentTime = theTime.getHours()+':'+String(theTime.getMinutes()).padStart(2,"0")+':'+String(theTime.getSeconds()).padStart(2,"0");
+  hours = theTime.getHours(); 
+  hours = (hours % 12) || 12; 
+
+  const currentTime = hours+':'+String(theTime.getMinutes()).padStart(2,"0")+':'+String(theTime.getSeconds()).padStart(2,"0");
 
   const amPM = theTime.getHours() >= 12 ? 'PM' : 'AM'; //If hours is greater than or equal to 12 then it's PM, else it's AM. 
 
   document.getElementById('clock').textContent = currentTime; //textContent is safer than innerHTML
   
   document.getElementById('amPM').textContent = amPM; 
-  }
+}
 
 function showDate() {
   const theDate = new Date(); 
@@ -25,8 +28,6 @@ setInterval(function() {
   showTime();
   showDate();
 },); //Add an optional delay in miliseconds here between the , and )
-
-
 
 const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday",];
 
