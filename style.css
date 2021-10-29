@@ -4,6 +4,7 @@ body {
 
 div {
   text-align: center;
+  font-size: 25px;
 }
 
 h1 {
@@ -11,17 +12,5 @@ h1 {
 }
 
 p.clock {
-  font-size: 100px;
-  /* border:solid; */
-  margin:0px;
-}
-
-p.date {
-  font-size: 50px;
-  /* border:solid; */
-  margin:0px;
-}
-
-#date {
-  font-size: 50px;
+  display: inline;
 }

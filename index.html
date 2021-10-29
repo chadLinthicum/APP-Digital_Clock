@@ -11,62 +11,13 @@
 <body>
   <div>
     <h1>Simple Digital Clock</h1>
-    <p class="clock">
-      <script>   
-
-      
-      /*
-        //Old code before discovering I could write it as I did below
-
-        var date = new Date(); 
-        var day = date.getDate(); //getDay would return the day of the week (Ex: Friday=5)
-        //var month = date.getMonth()+1; //without padding of 0 string
-        var month = String(date.getMonth()+1).padStart(2,"0");
-        var year = date.getFullYear(); 
-        var hour = date.getHours();
-        //var minute = date.getMinutes(); //without padding of 0 string
-        var minute = String(date.getMinutes()).padStart(2,"0");
-        //var second = date.getSeconds(); //without padding of 0 string
-        var second = String(date.getSeconds()).padStart(2,"0");
-
-        var currentDate = `${month}-${day}-${year}`; //example of string interpolation
-        var currentTime = `${hour}:${minute}:${second}`;
-        
-        document.write(currentDate);
-        document.write(currentTime);
-      */
-
-        var date = new Date(); //Not quite sure what this does yet. Instances the Date class? 
-        
-        const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday",];
-
-        const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-        const ordinalDays = ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th", "10th", "11th", "12th", "13th", "14th", "15th", "16th", "17th", "18th", "19th", "20th", "21st", "22nd", "23rd", "24th", "25th", "26th", "27th", "28th", "29th", "30th", "31st"]; 
-        
-        var currentDate = dayNames[date.getDay()]+", "+monthNames[date.getMonth()]+' '+ordinalDays[date.getDate()-1]+' '+date.getFullYear();
-
-        var currentTime = date.getHours()+':'+String(date.getMinutes()).padStart(2,"0")+':'+String(date.getSeconds()).padStart(2,"0");
-        
-        document.write(currentTime);  
-        
-        
-        setTimeout(function(){ //Just a placeholder until I figure out the correct method
-        location = '' //reloads the DOM
-        },1000)
-        
-      </script>
-    </p>
-
-    <p class="date">
-      <script>
-        document.write(currentDate);     
-      </script>
-    </p>
+    <p id="clock" class="clock"></p>
+    <p id="amPM" class="clock"></p>
+    <p id="date"></p>
     
   </div>
 
 
-
+<script type=text/javascript src="script.js"></script> <!--Call script in the body of the HTML-->
 </body>
 </html>
