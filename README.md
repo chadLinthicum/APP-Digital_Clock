@@ -3,7 +3,7 @@
  <br>
  <b>Description:</b> Watch the time melt away with this awesome digital clock!!<br>
  <br>
- <b>View in your browser: </b><a href="https://chadlinthicum.github.io/APP_Digital-Clock/">Here</a><br>
+ <b>View in your browser: </b><a href="https://chadlinthicum.github.io/APP-Digital_Clock/">Here</a><br>
  <br>
  <b>Download: </b><a href="https://github.com/chadLinthicum/APP_Digital-Clock_VanillaJS">Here</a><br>
  <br>
